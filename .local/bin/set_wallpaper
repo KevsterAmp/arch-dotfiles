@@ -1,0 +1,17 @@
+#!/bin/sh
+wall="$1"
+
+if [ ! -n "$wall" ]; then
+	wall="path/to/your/wallpaper"
+fi
+
+# set wallpaper
+xwallpaper --zoom $wall
+
+# set themes
+wal -c
+wal -i $wall
+
+# set status bar
+xdotool key super+F5
+
